@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.Anamnese.AdicionarAnamnesePage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             BackgroundColor="White"
+             Title="Adicionar Anamnese"
+             >
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="15">
+
+                <Image Source="psicomostazul.png"/>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Registro Paciente" />
+
+                <control:RoundedEntryAnamnese x:Name="txtRegistroPaciente" Keyboard="Text"/>
+
+                <!--QUEIXA PRINCIPAL-->
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Queixa Principal" />
+
+                <control:RoundedEditorAnamnese x:Name="edqQueixaP" Keyboard="Text" HeightRequest="100"/>
+
+                <!--EVOLUÇAO DA QUEIXA -->
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Como Começou" />
+
+                <control:RoundedEditorAnamnese x:Name="edComoComecou" Keyboard="Text" HeightRequest="100"/>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Repentino ou Gradual" />
+
+                <control:RoundedEditorAnamnese x:Name="edRepGradual" Keyboard="Text" HeightRequest="100"/>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Quais Transformações ocorreram" />
+
+                <control:RoundedEditorAnamnese x:Name="edTransformacoes" Keyboard="Text" HeightRequest="100"/>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Sintomas" />
+
+                <control:RoundedEditorAnamnese x:Name="edSintomas" Keyboard="Text" HeightRequest="100"/>
+
+
+                <!--QUEIXAS COGNITIVAS-->
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Integridade Sensorial" />
+
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="10,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Percepção" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="30,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Atenção" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+
+                    <CheckBox x:Name="cboIntegridade" />
+                    <CheckBox x:Name="cboPercepcao" Margin="111,0,0,0"/>
+                    <CheckBox x:Name="cboAtencao" Margin="100,0,0,0"/>
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Memória" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <CheckBox x:Name="cboMemoria" />
+                </StackLayout>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="OBS:" />
+
+                <control:RoundedEditorAnamnese x:Name="edQueixasCognitivas" Keyboard="Text" HeightRequest="100"/>
+
+                <!--QUEIXAS AFETIVOS EMOCIONAIS-->
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Volição" />
+
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="86,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Afeto" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="90,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Humor" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+
+                    <CheckBox x:Name="cboVolicao" />
+                    <CheckBox x:Name="cboAfeto" Margin="109,0,0,0"/>
+                    <CheckBox x:Name="cboHumor" Margin="100,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Ansiedade" />
+
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="70,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Medo" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="90,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Culpa" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+
+                    <CheckBox x:Name="cboAnsiedade" />
+                    <CheckBox x:Name="cboMedo" Margin="109,0,0,0"/>
+                    <CheckBox x:Name="cboCulpa" Margin="100,0,0,0"/>
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Psicomotricidade" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="18,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Raiva" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="90,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Normal" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+
+                    <CheckBox x:Name="cboPsicomotricidade" />
+                    <CheckBox x:Name="cboRaiva" Margin="109,0,0,0"/>
+                    <CheckBox x:Name="cboNormal" Margin="100,0,0,0"/>
+
+                </StackLayout>
+
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Lento" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="86,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Agitado" />
+
+                    <Label                                                
+                        FontFamily="Lobster-Regular"
+                        Margin="90,0,0,0"
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Luto" />
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+
+                    <CheckBox x:Name="cboLento" />
+                    <CheckBox x:Name="cboAgitado" Margin="109,0,0,0"/>
+                    <CheckBox x:Name="cboLuto" Margin="100,0,0,0"/>
+
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <Label                                                
+                        FontFamily="Lobster-Regular"                  
+                        FontSize="15"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Desânimo" />
+                </StackLayout>
+
+                <StackLayout Visual="Material" Orientation="Horizontal">
+                    <CheckBox x:Name="cboDesanimo" />
+                </StackLayout>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="OBS:" />
+
+                <control:RoundedEditorAnamnese x:Name="edQueixasAfetivosEmocionais" Keyboard="Text" HeightRequest="100"/>
+
+                <!--MAIS DETALHES-->
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Hábitos e Rotinas" />
+
+                <control:RoundedEditorAnamnese x:Name="edHabitosRotinas" Keyboard="Text" HeightRequest="100"/>
+
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Vida Social:" />
+
+                <control:RoundedEditorAnamnese x:Name="edVidaSocial" Keyboard="Text" HeightRequest="100"/>
+
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Como está a Saúde" />
+
+                <control:RoundedEditorAnamnese x:Name="edSaude" Keyboard="Text" HeightRequest="100"/>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Antecedentes Familiares(Casos na Família)" />
+
+                <control:RoundedEditorAnamnese x:Name="edAntecedentesF" Keyboard="Text" HeightRequest="100" />
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Hsitória Familiar" />
+
+                <control:RoundedEditorAnamnese x:Name="edHistoriaF" Keyboard="Text" HeightRequest="100" />
+
+                <!--TRATAMENTO-->
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Tratamento" />
+
+                <control:RoundedEditorAnamnese x:Name="edTratamento" Keyboard="Text" HeightRequest="100" />
+
+                <control:RoundedButton
+                    Clicked="RoundedButton_Clicked_Cadastrar"
+                    FontSize="16"
+                    Text="Cadastrar"
+                    Visual="Material"
+                    TextColor="White"                      
+                    Margin="0,15,0,12"
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

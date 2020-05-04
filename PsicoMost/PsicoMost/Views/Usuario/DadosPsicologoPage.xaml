@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.DadosPsicologoPage"
+             xmlns:local="clr-namespace:PsicoMost"
+             xmlns:model="clr-namespace:PsicoMost.BLL"    
+             xmlns:convert="clr-namespace:Wibci.Xamarin.Forms.Converters;assembly=Wibci.Xamarin.Forms.Converters"
+             xmlns:dxg="clr-namespace:DevExpress.XamarinForms.DataGrid;assembly=DevExpress.XamarinForms.Grid"
+             BackgroundColor="White"            
+             Title="Dados do Psicólogo" 
+             Visual="Material"            
+             >
+
+    <ContentPage.ToolbarItems>
+        <!--<ToolbarItem Order="Primary" Clicked="ToolbarItem_Clicked" Text="" Priority="0" IconImageSource="" />-->     
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.BindingContext>
+        <model:UsuarioBLL />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Image x:Name="imgPerfil" Visual="Material" Source="psicomostroxo.png" />
+
+                <dxg:DataGridView x:Name="gridPsicologo" Tap="GridPsicologo_Tap"  Visual="Material"  ItemsSource="{Binding dataTableCollection}" Margin="0, 10, 0, 0" RowHeight="75" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+
+                    <dxg:DataGridView.CellStyle>
+                        <dxg:CellStyle Padding="5,5,5,5"  BackgroundColor="White" BorderColor="Black"
+                           FontSize="10" FontColor="Black"  FontFamily="Lobster-Regular"
+                           SelectionColor="White" SelectionFontColor="White" />
+                    </dxg:DataGridView.CellStyle>
+
+                    <!--Customize the appearance of column headers.-->
+                    <dxg:DataGridView.ColumnHeaderStyle>
+                        <dxg:ColumnHeaderStyle BorderColor="Black" BackgroundColor="#9c27b0" FontFamily="Lobster-Regular"
+                             FontSize="12" FontColor="White" FontAttributes="Bold" 
+                             HorizontalLineThickness="2"/>
+                    </dxg:DataGridView.ColumnHeaderStyle>
+                </dxg:DataGridView>
+
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

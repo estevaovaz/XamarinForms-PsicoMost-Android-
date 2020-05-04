@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.SessãoPaciente.EnvioEmailPage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             BackgroundColor="White"
+             Title="Enviar Email"
+             >
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="15">
+
+                <Image Source="psicomostcoral.png"/>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Nome do Destinatário" />
+
+                <control:RoundedEntrySessao x:Name="txtNomePaciente"  />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Email do Destinatário" />
+
+                <control:RoundedEntrySessao x:Name="txtEmailPaciente"  />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Nome do Remetente" />
+
+                <control:RoundedEntrySessao x:Name="txtNomePsicologo"  />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Email do Remetente" />
+
+                <control:RoundedEntrySessao x:Name="txtEmailPsicologo"  />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Assunto" />
+
+                <control:RoundedEditorSessao x:Name="txtAssunto"  Keyboard="Text" HeightRequest="50"/>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Descrição da Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtDescricaoS"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Dt. Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtDtSessao" Keyboard="Numeric" Placeholder="Ex: 01/02/2020" MaxLength="10">
+                    <control:RoundedEntrySessao.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX/XX/XXXX" />
+                    </control:RoundedEntrySessao.Behaviors>
+                </control:RoundedEntrySessao>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Duração" />
+
+                <control:RoundedEntrySessao x:Name="txtDuracao"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Valor Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtValorSessao" Keyboard="Numeric" Placeholder="Ex: 80,00" MaxLength="7" Text="80,00"/>
+               
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Hora Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtHoraSessao" Keyboard="Numeric" Placeholder="Ex: 10:30" MaxLength="5">
+                    <control:RoundedEntrySessao.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX:XX" />
+                    </control:RoundedEntrySessao.Behaviors>
+                </control:RoundedEntrySessao>
+
+                <control:RoundedButtonSessao
+                    Clicked="RoundedButton_Clicked_Enviar"
+                    FontSize="16"
+                    Text="Enviar"
+                    Visual="Material"
+                    TextColor="White"                      
+                    Margin="0,15,0,12"
+                    />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

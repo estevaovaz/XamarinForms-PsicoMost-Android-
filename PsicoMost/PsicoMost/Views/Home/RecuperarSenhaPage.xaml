@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.RecuperarSenhaPage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             BackgroundColor="White"    
+             Title="Recuperar Senha" 
+             Visual="Material">
+    <ContentPage.Content>
+        <ScrollView Visual="Material" >
+            <StackLayout Visual="Material" Margin="20" >
+
+                <Image Source="psicomostlogo.png"/>
+
+                <Label
+                        FontFamily="Lobster-Regular"
+                        FontSize="20"
+                        TextColor="Black"
+                        Visual="Material"
+                        HorizontalTextAlignment="Center"                            
+                        Text="Psico Most" />
+
+                <Label
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"
+                        TextColor="Black"
+                        Visual="Material"
+                        HorizontalTextAlignment="Center"                            
+                        Text=" " />
+
+                <Label
+                    Grid.Row="1"                       
+                    FontFamily="Lobster-Regular"
+                    HorizontalTextAlignment="Start" 
+                    FontSize="16"
+                    Visual="Material"
+                    TextColor="Black"
+                    Text="Email" />
+
+                <control:RoundedEntry Keyboard="Email" x:Name="txtEmail"/>
+
+                <control:RoundedButton
+                    Clicked="RoundedButton_Clicked_Enviar"
+                    Grid.Row="5"  
+                    Margin="5"
+                    Visual="Material"
+                    TextColor="White"
+                    FontFamily="Lobster-Regular"
+                    FontSize="16"                                             
+                    Text="Enviar" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

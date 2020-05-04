@@ -1,0 +1,452 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.EditarPacientePage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             BackgroundColor="White"
+             Title="Editar Paciente"
+             >
+
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+
+            <StackLayout Visual="Material" Margin="15">
+
+                <Image Source="psicomostlogo.png"/>
+ 
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Nome" />
+
+                <control:RoundedEntry x:Name="txtNome"  Keyboard="Text" />
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Sobrenome" />
+
+                <control:RoundedEntry x:Name="txtSobrenome"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="CPF" />
+
+                <control:RoundedEntry x:Name="txtCPF" Keyboard="Numeric" MaxLength="14" Placeholder="999.999.999-99" >
+                    <control:RoundedEntry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XXX.XXX.XXX-XX" />
+                    </control:RoundedEntry.Behaviors>
+                </control:RoundedEntry>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Idade" />
+
+                <control:RoundedEntry x:Name="txtIdade" MaxLength="3" Keyboard="Numeric"/>
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Estado" />
+
+                <control:RoundedPicker x:Name="pcEstado" HorizontalOptions="FillAndExpand" Title="Selecione um Estado: " Visual="Material">
+                    <Picker.Items >
+                        <x:String>AC</x:String>
+                        <x:String>AM</x:String>
+                        <x:String>AP</x:String>
+                        <x:String>BA</x:String>
+                        <x:String>CE</x:String>
+                        <x:String>DF</x:String>
+                        <x:String>ES</x:String>
+                        <x:String>GO</x:String>
+                        <x:String>MA</x:String>
+                        <x:String>AL</x:String>
+                        <x:String>MG</x:String>
+                        <x:String>MS</x:String>
+                        <x:String>MT</x:String>
+                        <x:String>PA</x:String>
+                        <x:String>PB</x:String>
+                        <x:String>PE</x:String>
+                        <x:String>PI</x:String>
+                        <x:String>PR</x:String>
+                        <x:String>RJ</x:String>
+                        <x:String>RN</x:String>
+                        <x:String>RO</x:String>
+                        <x:String>RR</x:String>
+                        <x:String>RS</x:String>
+                        <x:String>SE</x:String>
+                        <x:String>SC</x:String>
+                        <x:String>SP</x:String>
+                        <x:String>TO</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Dt. Nascimento" />
+
+                <control:RoundedEntry x:Name="txtDtNascimento" Keyboard="Numeric" Placeholder="Ex: 01/02/1996" MaxLength="10">
+                    <control:RoundedEntry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX/XX/XXXX" />
+                    </control:RoundedEntry.Behaviors>
+                </control:RoundedEntry>
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Sexo" />
+
+                <control:RoundedPicker x:Name="pcSexo" HorizontalOptions="FillAndExpand" Title="Selecione um Sexo: ">
+                    <Picker.Items>
+                        <x:String>MASCULINO</x:String>
+                        <x:String>FEMININO</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Estado Civil" />
+
+                <control:RoundedPicker x:Name="pcEstadoCivil" HorizontalOptions="FillAndExpand" Title="Selecione um Sexo: ">
+                    <Picker.Items>
+                        <x:String>SOLTEIRO(A)</x:String>
+                        <x:String>CASADO(A)</x:String>
+                        <x:String>VIÚVO(A)</x:String>
+                        <x:String>DIVORCIADO(A)</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Nacionalidade" />
+
+                <control:RoundedEntry x:Name="txtNacionalidade"  Keyboard="Text" />
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Naturalidade" />
+
+                <control:RoundedEntry x:Name="txtNaturalidade"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Email" />
+
+                <control:RoundedEntry x:Name="txtEmail"  Keyboard="Email" />
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Bairro" />
+
+                <control:RoundedEntry x:Name="txtBairro"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Rua" />
+
+                <control:RoundedEntry x:Name="txtRua"  Keyboard="Text" />
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Cep" />
+
+                <control:RoundedEntry x:Name="txtCep"  Keyboard="Numeric" MaxLength="9" Placeholder="99999-999">
+                    <control:RoundedEntry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XXXXX-XXX" />
+                    </control:RoundedEntry.Behaviors>
+                </control:RoundedEntry>
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Cidade" />
+
+                <control:RoundedEntry x:Name="txtCidade" Keyboard="Text" />
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="DDD Residencial" />
+
+                <control:RoundedPicker x:Name="pcDDDResi" HorizontalOptions="FillAndExpand" Title="Selecione um DDD: ">
+                    <Picker.Items>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                        <x:String>17</x:String>
+                        <x:String>18</x:String>
+                        <x:String>19</x:String>
+                        <x:String>21</x:String>
+                        <x:String>22</x:String>
+                        <x:String>24</x:String>
+                        <x:String>27</x:String>
+                        <x:String>28</x:String>
+                        <x:String>31</x:String>
+                        <x:String>32</x:String>
+                        <x:String>33</x:String>
+                        <x:String>34</x:String>
+                        <x:String>35</x:String>
+                        <x:String>37</x:String>
+                        <x:String>38</x:String>
+                        <x:String>41</x:String>
+                        <x:String>42</x:String>
+                        <x:String>43</x:String>
+                        <x:String>44</x:String>
+                        <x:String>45</x:String>
+                        <x:String>46</x:String>
+                        <x:String>47</x:String>
+                        <x:String>48</x:String>
+                        <x:String>49</x:String>
+                        <x:String>51</x:String>
+                        <x:String>53</x:String>
+                        <x:String>54</x:String>
+                        <x:String>55</x:String>
+                        <x:String>61</x:String>
+                        <x:String>62</x:String>
+                        <x:String>63</x:String>
+                        <x:String>64</x:String>
+                        <x:String>65</x:String>
+                        <x:String>66</x:String>
+                        <x:String>67</x:String>
+                        <x:String>68</x:String>
+                        <x:String>69</x:String>
+                        <x:String>71</x:String>
+                        <x:String>73</x:String>
+                        <x:String>74</x:String>
+                        <x:String>75</x:String>
+                        <x:String>77</x:String>
+                        <x:String>79</x:String>
+                        <x:String>81</x:String>
+                        <x:String>82</x:String>
+                        <x:String>83</x:String>
+                        <x:String>84</x:String>
+                        <x:String>85</x:String>
+                        <x:String>86</x:String>
+                        <x:String>87</x:String>
+                        <x:String>88</x:String>
+                        <x:String>89</x:String>
+                        <x:String>91</x:String>
+                        <x:String>92</x:String>
+                        <x:String>94</x:String>
+                        <x:String>95</x:String>
+                        <x:String>96</x:String>
+                        <x:String>97</x:String>
+                        <x:String>98</x:String>
+                        <x:String>99</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Tel. Residencial" />
+
+                <control:RoundedEntry x:Name="txtResidencial"  Keyboard="Telephone" MaxLength="8" />
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="DDD Celular" />
+
+                <control:RoundedPicker x:Name="pcDDDCel" HorizontalOptions="FillAndExpand" Title="Selecione um DDD: ">
+                    <Picker.Items>
+                        <x:String>11</x:String>
+                        <x:String>12</x:String>
+                        <x:String>13</x:String>
+                        <x:String>14</x:String>
+                        <x:String>15</x:String>
+                        <x:String>16</x:String>
+                        <x:String>17</x:String>
+                        <x:String>18</x:String>
+                        <x:String>19</x:String>
+                        <x:String>21</x:String>
+                        <x:String>22</x:String>
+                        <x:String>24</x:String>
+                        <x:String>27</x:String>
+                        <x:String>28</x:String>
+                        <x:String>31</x:String>
+                        <x:String>32</x:String>
+                        <x:String>33</x:String>
+                        <x:String>34</x:String>
+                        <x:String>35</x:String>
+                        <x:String>37</x:String>
+                        <x:String>38</x:String>
+                        <x:String>41</x:String>
+                        <x:String>42</x:String>
+                        <x:String>43</x:String>
+                        <x:String>44</x:String>
+                        <x:String>45</x:String>
+                        <x:String>46</x:String>
+                        <x:String>47</x:String>
+                        <x:String>48</x:String>
+                        <x:String>49</x:String>
+                        <x:String>51</x:String>
+                        <x:String>53</x:String>
+                        <x:String>54</x:String>
+                        <x:String>55</x:String>
+                        <x:String>61</x:String>
+                        <x:String>62</x:String>
+                        <x:String>63</x:String>
+                        <x:String>64</x:String>
+                        <x:String>65</x:String>
+                        <x:String>66</x:String>
+                        <x:String>67</x:String>
+                        <x:String>68</x:String>
+                        <x:String>69</x:String>
+                        <x:String>71</x:String>
+                        <x:String>73</x:String>
+                        <x:String>74</x:String>
+                        <x:String>75</x:String>
+                        <x:String>77</x:String>
+                        <x:String>79</x:String>
+                        <x:String>81</x:String>
+                        <x:String>82</x:String>
+                        <x:String>83</x:String>
+                        <x:String>84</x:String>
+                        <x:String>85</x:String>
+                        <x:String>86</x:String>
+                        <x:String>87</x:String>
+                        <x:String>88</x:String>
+                        <x:String>89</x:String>
+                        <x:String>91</x:String>
+                        <x:String>92</x:String>
+                        <x:String>94</x:String>
+                        <x:String>95</x:String>
+                        <x:String>96</x:String>
+                        <x:String>97</x:String>
+                        <x:String>98</x:String>
+                        <x:String>99</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Celular" />
+
+                <control:RoundedEntry x:Name="txtCelular"  Keyboard="Telephone" MaxLength="9" />
+
+                <Label                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Situação" />
+
+                <control:RoundedPicker x:Name="pcSit" HorizontalOptions="FillAndExpand" Title="Selecione uma opção: ">
+                    <Picker.Items>
+                        <x:String>ATIVO(A)</x:String>
+                        <x:String>MORTO(A)</x:String>
+                        <x:String>AUSENTE(VIAJANDO, DE FÉRIAS, NO EXTERIOR.)</x:String>
+                    </Picker.Items>
+                </control:RoundedPicker>
+
+                <control:RoundedButton
+                    Clicked="RoundedButton_Clicked_Salvar"
+                    FontSize="16"
+                    Text="Salvar"
+                    Visual="Material"
+                    TextColor="White"                    
+                    Margin="0,15,0,12"
+                    />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

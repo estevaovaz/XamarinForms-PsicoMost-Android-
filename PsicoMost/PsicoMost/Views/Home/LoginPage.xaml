@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.LoginPage" 
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             BackgroundColor="White"  
+             xmlns:model="clr-namespace:PsicoMost.ViewModel"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             Title="Login" 
+             NavigationPage.HasBackButton="False"
+             Visual="Material"
+             >
+
+    <ContentPage.BindingContext>
+        <model:LoginPageViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+
+        <ScrollView Visual="Material" >
+
+            <StackLayout Visual="Material" Margin="20">
+
+                <Image Source="psicomostlogo.png"/>
+
+                <Label
+                        Grid.Row="1"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="CRP" />
+
+                <control:RoundedEntry x:Name="txtCRP" Placeholder="Ex: 99-99999" Keyboard="Numeric" MaxLength="8" Text="{Binding CRP}" >
+                    <control:RoundedEntry.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX-XXXXX"/>
+                    </control:RoundedEntry.Behaviors>
+                </control:RoundedEntry>
+
+                <Label
+                        Grid.Row="2"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        TextColor="Black"
+                        Visual="Material"
+                        Text="Senha" />
+
+                <control:RoundedEntrySenha x:Name="txtSenha" Text="{Binding Senha}" IsPassword="True" Visual="Material" Placeholder="Informe sua Senha"/>
+
+                <control:RoundedButton
+                        Clicked="RoundedButton_Clicked_Login"                       
+                        Grid.Row="3"  
+                        Margin="0, 11, 0, 0"
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"                                              
+                        Text="Entrar" />
+
+
+                <control:RoundedButtonTransparent                          
+                    Clicked="Button_Clicked"  
+                    FontFamily="Lobster-Regular"
+                    FontSize="16" 
+                    Visual="Material"                    
+                    VerticalOptions="End"
+                    HorizontalOptions="End"                      
+                    Text="Esqueceu a Senha?" />
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

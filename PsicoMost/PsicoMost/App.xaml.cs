@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PsicoMost.Models;
+using PsicoMost.Views;
+using PsicoMost.Views.Home;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,26 +10,59 @@ namespace PsicoMost
 {
     public partial class App : Application
     {
+        string crp = null;
+        
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new PreLoginPage());
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            crp = Utils.Settings.CRP;
+
+            if (crp == null || crp == "")
+            {
+                MainPage = new NavigationPage(new PreLoginPage());
+            }
+            else 
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            crp = Utils.Settings.CRP;
+
+            if (crp == null || crp == "")
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MenuPage());
+            }
+
+            
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            crp = Utils.Settings.CRP;
+
+            if (crp == null || crp == "")
+            {
+                MainPage = new NavigationPage(new LoginPage());
+            }
+            else
+            {
+                MainPage = new NavigationPage(new MenuPage());
+            }
+
         }
     }
 }

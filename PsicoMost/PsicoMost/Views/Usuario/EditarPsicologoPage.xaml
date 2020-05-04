@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.EditarPsicologoPage"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             BackgroundColor="White"
+             Visual="Material"
+             Title="Editar Psicólogo"
+             xmlns:control="clr-namespace:PsicoMost.Controls"           
+             >
+
+    <ContentPage.Content>
+
+        <ScrollView Visual="Material">
+
+            <StackLayout Visual="Material" Margin="15">
+
+                <Image Source="psicomostroxo.png"/>
+
+                <Label
+                        Grid.Row="1"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Nome " />
+
+                <control:RoundedEntryPsicologo x:Name="txtNome" Keyboard="Text" MaxLength="20" Text="" />
+
+                <Label
+                        Grid.Row="2"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="CRP" />
+
+                <control:RoundedEntryPsicologo x:Name="txtCRP" Placeholder="Ex: 99-99999" Keyboard="Numeric" MaxLength="8">
+                    <control:RoundedEntryPsicologo.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX-XXXXX" />
+                    </control:RoundedEntryPsicologo.Behaviors>
+                </control:RoundedEntryPsicologo>
+
+                <Label
+                        Grid.Row="3"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        TextColor="Black"
+                        Visual="Material"
+                        Text="Senha" />
+
+                <control:RoundedEntrySenhaPsicologo x:Name="txtSenha" Text="" IsPassword="True" Visual="Material" MaxLength="10" />
+
+                <Label
+                        Grid.Row="4"                       
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Email" />
+
+                <control:RoundedEntryPsicologo x:Name="txtEmail" Keyboard="Email" MaxLength="25" Text="" />
+
+
+                <control:RoundedButton
+                        Clicked="RoundedButton_Clicked_Salvar"                       
+                        Grid.Row="2"  
+                        Margin="0, 20, 0, 0"
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"                                              
+                        Text="Salvar" />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

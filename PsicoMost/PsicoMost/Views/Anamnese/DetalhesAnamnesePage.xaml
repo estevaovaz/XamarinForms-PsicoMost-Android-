@@ -1,0 +1,700 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.Anamnese.DetalhesAnamnesePage"
+             BackgroundColor="#f5f5f5"
+             Title="Detalhes da Anamnese"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             >
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="20">
+                <!--GRID DADOS DA ANAMNESE TITULO-->
+                <Grid BackgroundColor="#2196F3" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="DADOS DA ANAMNESE" Margin="5,5,0,0" TextColor="White" FontFamily="Arial" FontSize="Medium" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                </Grid>
+
+                <Grid BackgroundColor="#FFFFFF" Margin="0,0,0,15">
+
+                  <Grid.RowDefinitions >
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="30" /> <!--10-->
+                        
+                        <RowDefinition Height="60" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" /> <!--16-->
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="40" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        
+                        <RowDefinition Height="50" /> <!--41-->
+                        
+
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                           Margin="5,2,0,0"
+                           Text="Registro" 
+                           Grid.Row="0" 
+                           Grid.Column="0" 
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblRegistro"
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           Grid.Row="1" 
+                           Grid.Column="0" 
+                           />
+
+                    <Label Text="Queixa Principal" 
+                            Margin="5,0,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                            x:Name="lblQueixaP"
+                            Grid.Row="3" 
+                            Grid.Column="0"                           
+                            FontFamily="Arial"
+                            FontSize="Small"
+                            TextColor="#666666"
+                            Margin="5,0,0,0"
+                        />
+
+                    <Label Text="Como Começou" 
+                            Margin="5,0,0,0"
+                           Grid.Row="4" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                           x:Name="lblComocomecou"
+                            Margin="5,0,0,0"
+                           Grid.Row="5" 
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="RepentinoOuGradual"  
+                            Margin="5,0,0,0"
+                           Grid.Row="6" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                            x:Name="lblRepGradual"
+                           Grid.Row="7" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Transformações" 
+                           Margin="5,0,0,0"
+                           Grid.Row="8" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblTransformacoes"
+                           Margin="5,0,0,0"
+                           Grid.Row="9" 
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Sintomas" 
+                            Margin="5,0,0,0"
+                           Grid.Row="10" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblSintomas"
+                           Grid.Row="11"
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Integridade Sensorial" 
+                           Margin="5,0,0,0"
+                           Grid.Row="12" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblIntSensorial" 
+                           Grid.Row="13" 
+                           Grid.Column="0"     
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Percepção" 
+                           Margin="10,5,0,0"
+                           Grid.Row="12" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblPercepcao"
+                           Grid.Row="13" 
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           Margin="5,0,0,0"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Atenção" 
+                           Margin="15,5,0,0"
+                           Grid.Row="12" 
+                           Grid.Column="2"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"                           
+                           />
+
+                    <Label x:Name="lblAtencao" 
+                           Grid.Row="13" 
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Memória" 
+                           Margin="5,0,0,0"
+                           Grid.Row="14" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblMemoria"
+                           Grid.Row="15" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="OBS" 
+                           Margin="5,0,0,0"
+                           Grid.Row="16" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblQueixasCognitivas"
+                           Grid.Row="17" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Volição" 
+                           Margin="5,0,0,0"
+                           Grid.Row="18" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblVolicao"
+                           Grid.Row="19" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Afeto" 
+                           Margin="5,0,0,0"
+                           Grid.Row="18" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblAfeto"
+                           Grid.Row="19" 
+                           Margin="5,0,0,0"
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Humor" 
+                           Margin="5,0,0,0"
+                           Grid.Row="18" 
+                           Grid.Column="2"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblHumor"
+                           Grid.Row="19" 
+                           Margin="5,0,0,0"
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Ansiedade" 
+                           Margin="5,0,0,0"
+                           Grid.Row="20" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblAnsiedade"
+                           Grid.Row="21" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Medo" 
+                           Margin="5,0,0,0"
+                           Grid.Row="20" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblMedo"
+                           Grid.Row="21" 
+                           Margin="5,0,0,0"
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Culpa" 
+                           Margin="5,0,0,0"
+                           Grid.Row="20" 
+                           Grid.Column="2"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblCulpa"
+                           Grid.Row="21" 
+                           Margin="5,0,0,0"
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Psicomotricidade" 
+                           Margin="5,0,0,0"
+                           Grid.Row="22" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblPsicomotricidade"
+                           Grid.Row="23" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Raiva" 
+                           Margin="5,0,0,0"
+                           Grid.Row="22" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblRaiva"
+                           Grid.Row="23" 
+                           Margin="5,0,0,0"
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Normal" 
+                           Margin="5,0,0,0"
+                           Grid.Row="22" 
+                           Grid.Column="2"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblNormal"
+                           Grid.Row="23" 
+                           Margin="5,0,0,0"
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Lento" 
+                           Margin="5,0,0,0"
+                           Grid.Row="24" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lbllento"
+                           Grid.Row="25" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Agitado" 
+                           Margin="5,0,0,0"
+                           Grid.Row="24" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblAgitado"
+                           Grid.Row="25" 
+                           Margin="5,0,0,0"
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Luto" 
+                           Margin="5,0,0,0"
+                           Grid.Row="24" 
+                           Grid.Column="2"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblLuto"
+                           Grid.Row="25" 
+                           Margin="5,0,0,0"
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Desânimo" 
+                           Margin="5,0,0,0"
+                           Grid.Row="26" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblDesanimo"
+                           Grid.Row="27" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="OBS:" 
+                           Margin="5,0,0,0"
+                           Grid.Row="28" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblQueixasAfetivosEmocionais"
+                           Grid.Row="29" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Hábitos e Rotinas" 
+                           Margin="5,0,0,0"
+                           Grid.Row="30" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblhabtios"
+                           Grid.Row="31" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Vida Social" 
+                           Margin="5,0,0,0"
+                           Grid.Row="32" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblVidaSocial"
+                           Grid.Row="33" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Como está a Saúde" 
+                           Margin="5,0,0,0"
+                           Grid.Row="34" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblComoestasaude"
+                           Grid.Row="35" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="História Familiar" 
+                           Margin="5,0,0,0"
+                           Grid.Row="36" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblhistoriaFa"
+                           Grid.Row="37" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Antecedentes Familiares" 
+                           Margin="5,0,0,0"
+                           Grid.Row="38" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblAnteceFamiliares"
+                           Grid.Row="39" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Tratamento" 
+                           Margin="5,0,0,0"
+                           Grid.Row="40" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblTratamento"
+                           Grid.Row="41" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

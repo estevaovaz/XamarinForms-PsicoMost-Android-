@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.SessãoPaciente.EnvioSMSPage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             BackgroundColor="White"
+             Title="Envio por SMS"
+             >
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Margin="20" Visual="Material">
+
+                <Image Source="psicomostcoral.png" Visual="Material"/>
+                
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Mensagem" />
+                
+                <control:RoundedEditorSessao
+                    Visual="Material"
+                    HeightRequest="100"
+                    x:Name="editMsg"
+                    Keyboard="Text"
+                    Placeholder="Escreva a mensagem que será enviada ao paciente"
+                    />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Telefone do paciente" />
+
+                <control:RoundedEntrySessao
+                    Visual="Material"
+                    x:Name="txtNumero"
+                    Keyboard="Telephone"
+                    Placeholder="Ex: (21) 99999-9999"
+                    >
+                    <control:RoundedEntrySessao.Behaviors>
+                        <behavior:MaskedBehavior Mask="(XX) XXXXX-XXXX"/>
+                    </control:RoundedEntrySessao.Behaviors>
+                </control:RoundedEntrySessao>
+
+                <control:RoundedButtonSessao
+                    Clicked="RoundedButtonSessao_Clicked"
+                    Text="Enviar"
+                    Visual="Material"
+                    FontFamily="arial"
+                    FontSize="16"
+                    TextColor="White"
+                     Margin="0,15,0,12"
+                   
+                    />
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

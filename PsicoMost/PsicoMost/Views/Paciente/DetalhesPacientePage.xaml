@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.DetalhesPacientePage"
+             xmlns:model="clr-namespace:PsicoMost.BLL"
+             xmlns:dxg="clr-namespace:DevExpress.XamarinForms.DataGrid;assembly=DevExpress.XamarinForms.Grid"           
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             Title="Detalhes do Paciente"
+             BackgroundColor="#F5F5F5"
+             >
+
+    <ContentPage.Content>
+
+        <ScrollView Visual="Material">
+            
+            <StackLayout Margin="20">
+
+                <!--GRID DADOS PESOAIS TITULO-->
+                <Grid BackgroundColor="#009688">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="DADOS PESSOAIS" Margin="5,5,0,0" TextColor="White" FontFamily="Arial" FontSize="Medium" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                </Grid>
+                
+                <Grid BackgroundColor="#FFFFFF">
+                    
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                  
+              
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+                       
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                            Margin="5,2,0,0"
+                           Text="Registro" 
+                           Grid.Row="0" 
+                           Grid.Column="0" 
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblRegistro"
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           Grid.Row="1" 
+                           Grid.Column="0" 
+                           />
+
+                    <Label Text="Nome" 
+                            Margin="5,5,0,0"
+                           Grid.Row="0" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                            x:Name="lblNome"
+                            Grid.Row="1" 
+                            Grid.Column="1"                           
+                            FontFamily="Arial"
+                            FontSize="Small"
+                            TextColor="#666666"
+                            Margin="5,0,0,0"
+                        />
+
+                    <Label Text="Sobrenome" 
+                            Margin="0,5,0,0"
+                           Grid.Row="0" 
+                           Grid.Column="2"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                           x:Name="lblSobrenome"
+                           Grid.Row="1" 
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Dt. Nascimento"  
+                            Margin="5,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                            x:Name="lblDtNascimento"
+                           Grid.Row="3" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Sexo" 
+                           Margin="20,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblSexo"
+                           Margin="5,0,0,0"
+                           Grid.Row="3" 
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Estado Civil" 
+                            Margin="0,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="2"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblEstadoCivil"
+                           Grid.Row="3" 
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Nacionalidade" 
+                            Margin="5,5,0,0"
+                           Grid.Row="4" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblNacionalidade" 
+                           Grid.Row="5" 
+                           Grid.Column="0"     
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Natuaralidade" 
+                            Margin="10,5,0,0"
+                           Grid.Row="4" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblNaturalidade"
+                           Grid.Row="5" 
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           Margin="5,0,0,0"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Situação" 
+                            Margin="15,5,0,0"
+                           Grid.Row="4" 
+                           Grid.Column="2"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"                           
+                           />
+
+                    <Label x:Name="lblSituacao" 
+                           Grid.Row="5" 
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Email" 
+                            Margin="5,5,0,0"
+                           Grid.Row="6" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblEmail"
+                           Grid.Row="7" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                </Grid>
+
+                <!--GRID ENDEREÇOS TITULO-->
+                <Grid BackgroundColor="#009688" Margin="0,5,0,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="ENDEREÇOS" Margin="5,5,0,0" TextColor="White" FontFamily="Arial" FontSize="Medium" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                </Grid>
+
+                <Grid BackgroundColor="#FFFFFF">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="30" />
+                   
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+                        <ColumnDefinition Width="33*" />
+
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                            Margin="5,5,0,0"
+                           Text="Bairro" 
+                           Grid.Row="0" 
+                           Grid.Column="0" 
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblBairro"
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           Grid.Row="1" 
+                           Grid.Column="0" 
+                           />
+
+                    <Label Text="Rua" 
+                            Margin="5,5,0,0"
+                           Grid.Row="0" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                           x:Name="lblRua"
+                            Grid.Row="1" 
+                            Grid.Column="1"                           
+                            FontFamily="Arial"
+                            FontSize="Small"
+                            TextColor="#666666"
+                            Margin="5,0,0,0"
+                        />
+
+                    <Label Text="UF" 
+                            Margin="0,5,0,0"
+                           Grid.Row="0" 
+                           Grid.Column="2"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblUF"
+                           Grid.Row="1" 
+                           Grid.Column="2"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="CEP"  
+                            Margin="5,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="0"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblCep" 
+                           Grid.Row="3" 
+                           Margin="5,0,0,0"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+
+                    <Label Text="Cidade" 
+                            Margin="5,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label x:Name="lblCidade" 
+                           Margin="5,0,0,0"
+                           Grid.Row="3" 
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+                </Grid>
+
+                <!--GRID TELEFONES TITULO-->
+                <Grid BackgroundColor="#009688" Margin="0,5,0,0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="35" />
+                    </Grid.RowDefinitions>
+
+                    <Label Text="TELEFONES" Margin="5,5,0,0" TextColor="White" FontFamily="Arial" FontSize="Medium" Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"/>
+
+                </Grid>
+
+                <Grid BackgroundColor="#FFFFFF" Margin="0,0,0,15">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                            Margin="5,5,0,0"
+                           Text="DDD Res." 
+                           Grid.Row="0" 
+                           Grid.Column="0" 
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label Text=""
+                           Margin="5,0,0,0"
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           Grid.Row="1" 
+                           x:Name="lblDDDRes"
+                           Grid.Column="0" 
+                           />
+
+                    <Label 
+                            Text="Tel. Res." 
+                            Margin="5,5,0,0"
+                           Grid.Row="0" 
+                           Grid.Column="1"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small" 
+                           TextColor="#000000"
+                           />
+
+                    <Label 
+                            Text=""
+                            x:Name="lblTelResi"
+                            Grid.Row="1" 
+                            Grid.Column="1"                           
+                            FontFamily="Arial"
+                            FontSize="Small"
+                            TextColor="#666666"
+                            Margin="5,0,0,0"
+                        />
+
+                    <Label Text="DDD Celular" 
+                            Margin="5,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="0"
+                            FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label Text="" 
+                           Grid.Row="3" 
+                           Margin="5,0,0,0"
+                            x:Name="lblDDDCel"
+                           Grid.Column="0"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+
+                    <Label Text="Celular"  
+                            Margin="5,5,0,0"
+                           Grid.Row="2" 
+                           Grid.Column="1"
+                           FontFamily="Arial" 
+                           FontAttributes="Bold" 
+                           FontSize="Small"                          
+                           TextColor="#000000"
+                           />
+
+                    <Label Text="" 
+                            x:Name="lblCel"
+                           Grid.Row="3" 
+                           Margin="5,0,0,0"
+                           Grid.Column="1"                             
+                           FontFamily="Arial"
+                           FontSize="Small"
+                           TextColor="#666666"
+                           />
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+    
+    </ContentPage.Content>
+</ContentPage>

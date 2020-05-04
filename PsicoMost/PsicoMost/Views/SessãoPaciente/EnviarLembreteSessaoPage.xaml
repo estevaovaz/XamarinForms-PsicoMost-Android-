@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.SessãoPaciente.EnviarLembreteSessaoPage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             BackgroundColor="White"
+             Title="Lembrete da Sessão"  
+            
+             >
+    
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Margin="20" Visual="Material">
+
+                <Image Source="psicomostcoral.png" Visual="Material"/>
+                
+                <control:RoundedButtonSessao 
+                    x:Name="btnSMS"
+                    Clicked="RoundedButtonSessao_Clicked_SMS"
+                        Text="ENVIAR POR SMS"
+                    FontSize="16"
+                    FontFamily="Arial"
+                    Margin="0,15,0,10"
+                    TextColor="White"
+                    Visual="Material" />
+                
+                <control:RoundedButtonSessao Clicked="RoundedButtonSessao_Clicked_EMAIL" 
+                                               Text="ENVIAR POR EMAIL"
+                                           FontSize="16"
+                                          FontFamily="Arial"                                             
+                                             TextColor="White"
+                                             Visual="Material"
+                                           
+                                             />
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

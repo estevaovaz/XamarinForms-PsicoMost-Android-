@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.ConsultaPacientePage"
+             Visual="Material"
+             xmlns:model="clr-namespace:PsicoMost.BLL"
+             xmlns:dxg="clr-namespace:DevExpress.XamarinForms.DataGrid;assembly=DevExpress.XamarinForms.Grid"
+             BackgroundColor="White"            
+             Title="Consulta Paciente" 
+             >
+
+    <ContentPage.BindingContext>
+        <model:PacienteBLL />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="ToolbarItem_Clicked_Adicionar" Order="Primary" Priority="0" IconImageSource="addicon.png" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="10" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+
+                <Image x:Name="imgPerfil" Visual="Material" Source="psicomostlogo.png" />
+
+                <dxg:DataGridView x:Name="gridPaciente" Margin="0, 10, 0, 0" RowHeight="75" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Visual="Material" ItemsSource="{Binding dataTableCollection}" Tap="GridPaciente_Tap">
+
+                    <dxg:DataGridView.CellStyle>
+                        <dxg:CellStyle Padding="5, 5, 5, 5"  BackgroundColor="White" BorderColor="Black"
+                           FontSize="10" FontColor="Black"  FontFamily="Lobster-Regular" 
+                           SelectionColor="White" SelectionFontColor="#009688" />
+                    </dxg:DataGridView.CellStyle>
+
+                    <!--Customize the appearance of column headers.-->
+                    <dxg:DataGridView.ColumnHeaderStyle>
+                        <dxg:ColumnHeaderStyle BorderColor="Black" BackgroundColor="#009688" FontFamily="Lobster-Regular"
+                             FontSize="12" FontColor="White" FontAttributes="Bold"  
+                             HorizontalLineThickness="2"/>
+                    </dxg:DataGridView.ColumnHeaderStyle>
+
+                    <!--Editar e Excluir Usando Swipe-->
+                    <dxg:DataGridView.StartSwipeItems >
+                        <dxg:SwipeItem Caption="Editar" BackgroundColor="#009688" Image="useredit.png" FontColor="White" 
+                           Tap="SwipeItem_Tap_Edit" 
+                           />
+                    </dxg:DataGridView.StartSwipeItems>
+                    
+                    <dxg:DataGridView.EndSwipeItems>
+                        <dxg:SwipeItem Caption="Deletar" BackgroundColor="#CB2027" Image="delete24.png" FontColor="White"
+                           Tap="SwipeItem_Tap_Delete" 
+                         />
+                    </dxg:DataGridView.EndSwipeItems>
+
+                    <dxg:DataGridView.SwipeItemStyle>
+                        <dxg:SwipeItemStyle Width="100"/>
+                    </dxg:DataGridView.SwipeItemStyle>
+                </dxg:DataGridView>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

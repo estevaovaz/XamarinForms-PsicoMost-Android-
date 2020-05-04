@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="PsicoMost.Views.MenuPage"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             BackgroundColor="White"    
+             Title="Menu" 
+              NavigationPage.HasBackButton="False"
+              Visual="Material"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="logout.png" Order="Primary" Priority="0" Clicked="ToolbarItem_Clicked_Logout"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+
+            <StackLayout Visual="Material" Margin="20">
+
+                <Image Source="psicomostlogo.png"/>
+
+                <control:RoundedButtonPsicologo
+                        Margin="5"
+                        Clicked="RoundedButton_Clicked_Psicologo"
+                        Grid.Row="5"                            
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"                                             
+                        FontSize="16"                                              
+                        Text="Dados do Psicólogo" />
+                
+                <control:RoundedButton
+                        Clicked="RoundedButton_Clicked_Paciente"
+                        Grid.Row="5"  
+                        Margin="8"
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"                                              
+                        Text="Consultar Pacientes" />
+                
+                <control:RoundedButtonAnamnese
+                        Clicked="RoundedButton_Clicked_Anamnese"
+                        Grid.Row="5"  
+                        Margin="8"
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"                                              
+                        Text="Consultar Anamnese" />
+                
+                <control:RoundedButtonSessao
+                        Clicked="RoundedButton_Clicked_Sessao"
+                        Grid.Row="5"  
+                        Margin="8"
+                        Visual="Material"
+                        TextColor="White"
+                        FontFamily="Lobster-Regular"
+                        FontSize="16"                         
+                        Text="Consultar Sessão" />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

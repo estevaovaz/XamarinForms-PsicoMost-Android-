@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PsicoMost.Views.SessãoPaciente.AdicionarSessaoPage"
+             xmlns:behavior="clr-namespace:PsicoMost.Utils"
+             xmlns:control="clr-namespace:PsicoMost.Controls"
+             BackgroundColor="White"
+             Title="Adicionar Paciente"
+             >
+    
+    <ContentPage.Content>
+        <ScrollView Visual="Material">
+            <StackLayout Visual="Material" Margin="15">
+
+                <Image Source="psicomostcoral.png"/>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Registro Paciente" />
+
+                <control:RoundedEntrySessao x:Name="txtRegistroPaciente"  />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Descrição Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtDescricaoS"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Situação" />
+
+                <control:RoundedEntrySessao x:Name="txtSituacao"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Dt. Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtDtSessao" Keyboard="Numeric" Placeholder="Ex: 01/02/1996" MaxLength="10">
+                    <control:RoundedEntrySessao.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX/XX/XXXX" />
+                    </control:RoundedEntrySessao.Behaviors>
+                </control:RoundedEntrySessao>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Duração" />
+
+                <control:RoundedEntrySessao x:Name="txtDuracao"  Keyboard="Text" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Valor Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtValorSessao" Keyboard="Numeric" Placeholder="Ex: 80,00" MaxLength="7" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Valor Juros" />
+
+                <control:RoundedEntrySessao x:Name="txtValorJuros" Keyboard="Numeric" Placeholder="Ex: 80,00" MaxLength="7" />
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Valor Multa" />
+
+                <control:RoundedEntrySessao x:Name="txtValorMulta" Keyboard="Numeric" Placeholder="Ex: 80,00" MaxLength="7"/>
+
+                <Label
+                                                
+                        FontFamily="Lobster-Regular"
+                        HorizontalTextAlignment="Start" 
+                        FontSize="16"
+                        Visual="Material"
+                        TextColor="Black" 
+                        Text="Hora Sessão" />
+
+                <control:RoundedEntrySessao x:Name="txtHoraSessao" Keyboard="Numeric" Placeholder="Ex: 10:30" MaxLength="5">
+                    <control:RoundedEntrySessao.Behaviors>
+                        <behavior:MaskedBehavior Mask="XX:XX" />
+                    </control:RoundedEntrySessao.Behaviors>
+                </control:RoundedEntrySessao>
+              
+                <control:RoundedButton
+                    Clicked="RoundedButton_Clicked_Cadastrar"
+                    FontSize="16"
+                    Text="Cadastrar"
+                    Visual="Material"
+                    TextColor="White"                      
+                    Margin="0,15,0,12"
+                    />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

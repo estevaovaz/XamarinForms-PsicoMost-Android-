@@ -1,8 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Wibci.Xamarin.Forms.Converters;assembly=Wibci.Xamarin.Forms.Converters"
              x:Class="PsicoMost.App">
     <Application.Resources>
+
+
+        <ResourceDictionary>
+            
+            <Color x:Key="NavigationBarColor">#9c27b0</Color>
+            
+            <converters:ByteArrayToImageSourceConverter x:Key="foto" />
+            <converters:EmptyStringToFillTextConverter x:Key="esft" />
+            <converters:NullValueToBooleanConverter x:Key="nvb" />
+            <converters:BooleanToInvertedBooleanConverter x:Key="bib" />
+
+            <Style TargetType="NavigationPage" ApplyToDerivedTypes="False" x:Key="barcolor">
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource Key=backgroundColor}" />
+            </Style>
+
+            <!--<OnPlatform x:Key="PostFontIcon" x:TypeArguments="x:String">
+                <On Platform="Android" Value="fontello.ttf#Regular" />
+            </OnPlatform>-->
+
+        </ResourceDictionary>
+
+       
+        <!--<Style TargetType="{x:Type NavigationPage}">
+            <Setter Property="BarBackgroundColor"
+                    Value="{StaticResource NavigationBarColor}" />            
+        </Style>-->
 
     </Application.Resources>
 </Application>
