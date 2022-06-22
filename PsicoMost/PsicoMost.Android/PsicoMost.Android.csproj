@@ -56,7 +56,7 @@
       <Version>1.0.21</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>12.0.3</Version>
+      <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
       <Version>18.1.0.46</Version>
